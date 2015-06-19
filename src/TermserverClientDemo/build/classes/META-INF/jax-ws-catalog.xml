@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-    <system systemId="http://193.25.22.69:8080/TermServer/Search?wsdl" uri="wsdl/193.25.22.69_8080/TermServer/Search.wsdl"/>
-    <system systemId="http://193.25.22.69:8080/TermServer/Search?xsd=1" uri="wsdl/193.25.22.69_8080/TermServer/Search.xsd_1.xsd"/>
-    <system systemId="http://193.25.22.69:8080/TermServer/Search?xsd=2" uri="wsdl/193.25.22.69_8080/TermServer/Search.xsd_2.xsd"/>
-</catalog>

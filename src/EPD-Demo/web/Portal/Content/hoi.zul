@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<zk xmlns="http://www.zkoss.org/2005/zul">
-  <include src="http://localhost:8080/HOI_HPI/Portal/hoi.zul"/>
-</zk>
