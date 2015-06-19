@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" ?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+
+  <?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./winInfos"?>
+  <window id="winInfos" title="${labels.information}" width="800px"  height="500px" border="normal"
+          use="de.fhdo.gui.Infos" closable="true"
+          sizable="false">
+    <caption image="/rsc/img/symbols/info_blue_24x24.png"/>
+    
+    <borderlayout>
+      <center border="0">
+        <vbox width="100%">
+          <separator bar="false" />
+          <label value="Health Organization Index / Health Professional Index" style="font-weight:bold;font-size:22px;"/>
+          
+          <separator bar="false" height="6px"/>
+          <separator bar="true" hflex="true"/>
+          <separator bar="false" />
+          
+          <hbox width="100%">
+            <vbox width="140px">
+              <label value="Auftraggeber:" />
+            </vbox>
+            <vbox>
+              <label value="eHealth Suisse"/>
+            </vbox>
+          </hbox>
+          <hbox width="100%">
+            <vbox width="140px">
+              <label value="Entwicklung Client:" />
+            </vbox>
+            <vbox>
+              <label value="Robert Mützner (robert.muetzner@fh-dortmund.de), FH Dortmund"/>
+            </vbox>
+          </hbox>
+          <hbox width="100%">
+            <vbox width="140px">
+              <label value="Entwicklung Services:" />
+            </vbox>
+            <vbox>
+              <label value="FH Bern"/>
+            </vbox>
+          </hbox>
+          
+          <separator bar="false" height="6px"/>
+          <separator bar="true" hflex="true"/>
+          <separator bar="false" />
+          
+          
+          <label value="${labels.properties}" style="font-weight:bold;"/>
+          
+          <grid>
+            <columns>
+              <column label="" hflex="min"/>
+              <column label=""/>
+            </columns>
+            <rows>
+              <row>
+                <label value="HPD URL" />
+                <label value="@{winInfos.properties.hpdUrl}"/>
+              </row>
+              <row>
+                <label value="Termserver URL" />
+                <label value="@{winInfos.properties.termserverUrl}"/>
+              </row>
+              <row>
+                <label value="OID Org Speciality" />
+                <label value="@{winInfos.properties.oidOrganizationSpeciality}"/>
+              </row>
+              <row>
+                <label value="OID Org Type" />
+                <label value="@{winInfos.properties.oidOrganizationType}"/>
+              </row>
+              <row>
+                <label value="OID HP Speciality" />
+                <label value="@{winInfos.properties.oidHealthProfessionalSpeciality}"/>
+              </row>
+              <row>
+                <label value="OID HP Type" />
+                <label value="@{winInfos.properties.oidHealthProfessionalType}"/>
+              </row>
+            </rows>
+          </grid>
+
+        </vbox>
+      </center>
+<!--      <south height="28px" border="0">
+        
+        <div align="right" style="margin-right:4px;">
+          <button id="buttonOk" label="${labels.ok}" autodisable="self" />
+          <button id="buttonCancel" label="${labels.cancel}" autodisable="self" />
+        </div>
+      </south>-->
+    </borderlayout>
+  </window>
+</zk>

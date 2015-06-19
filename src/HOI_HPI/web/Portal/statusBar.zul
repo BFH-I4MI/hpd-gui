@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" ?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+  
+
+  <?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./win"?>
+  <window id="win" use="de.fhdo.gui.StatusBar" 
+          style="margin-left:-4px;margin-top:-4px;margin-bottom:-5px; margin-right:-4px;">
+    
+    
+    
+    <!--    <div sclass="z-toolbar" >-->
+    <div >
+      <toolbar id="tb3" align="end">
+        <!--<label id="now" style="font-weight:bold;font-size:10pt;color:black;font-family:verdana;" />-->
+<!--        <label id="test" value="Test" style="font-weight:bold;font-size:10pt;color:black;font-family:verdana;" />
+        <toolbarbutton id="buttonTest" visible="true" image="/rsc/img/symbols/info_16x16.png"
+                       onClick='Clients.evalJavaScript("testFunction();")'/>-->
+        <toolbarbutton id="tb_info" visible="true" image="/rsc/img/symbols/info_16x16.png"
+                       onClick="win.showInfos()"/>
+        
+        
+      </toolbar>
+<!--      <hbox pack="stretch" width="100%">
+                                    
+        <toolbar id="tb" align="start" width="95%" >
+          <toolbarbutton label="" 
+                         visible="true"
+                         onClick='win.switchLanguage("de")'
+                         image="/rsc/img/countries/Germany.png"/>
+          
+<toolbarbutton label="" 
+          visible="true"
+          onClick='win.switchLanguage("en")'
+          image="/rsc/img/countries/USA.png"/>
+                                
+          <toolbarbutton id="tb_admin"  label="" visible="true"/>
+          <toolbarbutton id="tb_org" image="/rsc/images/symbols/hospital.png" label="-" 
+tooltiptext="Wechsel der Einrichtung"/>
+<toolbarbutton id="tb_user" image="/rsc/images/symbols/user_16x16.png" label="-" onClick='win.onUserClicked()'
+          tooltiptext="Bearbeitet die eigenen Daten"/>
+<toolbarbutton id="tb_logout" image="/rsc/images/symbols/unlock_16x16.png" label="Abmelden" onClick='win.onLogoutClicked()'
+          tooltiptext="Meldet den aktuellen Benutzer vom System ab"/>
+    
+        </toolbar>    
+               
+        
+        <toolbar id="tb3" height="20px" align="end">
+          <label id="now" style="font-weight:bold;font-size:10pt;color:black;font-family:verdana;" />
+        </toolbar>
+			
+      </hbox>-->
+    </div>
+     
+  </window>
+</zk>

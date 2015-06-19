@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" ?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+  <window id="winAbout" title="${labels.about}"
+          border="normal" 
+          closable="true" 
+          width="550px"  height="250px"
+          sizable="false"
+          style="padding: 4px 4px;"
+          >
+    <caption image="/rsc/img/symbols/info_16x16.png" label="" />
+    
+    <borderlayout>
+      <north border="0">
+        <!--<toolbar >
+            <toolbarbutton tooltiptext="${labels.common.fhDo}"        image="/rsc/img/fh_logo_klein.png"    onClick="win.onLogoFHClicked()" />            
+            <toolbarbutton tooltiptext="${labels.common.fhTw}"         image="/rsc/img/fhtw_logo.png"         onClick="win.onLogoFHTWClicked()" />
+            
+            <toolbarbutton tooltiptext="${labels.common.eBPGProject}" image="/rsc/img/logo_ebpg_40.png"     onClick="win.onLogoEBPGClicked()" />
+            <toolbarbutton tooltiptext="${labels.common.elga}"         image="/rsc/img/elga_logo.png"         onClick="win.onLogoELGAClicked()" />
+            
+            <toolbarbutton tooltiptext="${labels.common.eu}"          image="/rsc/img/logo_EU.png"          onClick="win.onLogoEUClicked()" />
+            <toolbarbutton tooltiptext="${labels.common.nrw}"         image="/rsc/img/logo_NRW.png"         onClick="win.onLogoNRWClicked()" />             
+            <toolbarbutton tooltiptext="${labels.common.bmg}"         image="/rsc/img/logo_BMG.png"         onClick="win.onLogoBMGClicked()" />                         
+            <toolbarbutton tooltiptext="${labels.common.bmgAT}"         image="/rsc/img/bmg_logo.png"         onClick="win.onLogoBMGATClicked()" />
+            <toolbarbutton tooltiptext="${labels.common.brz}"         image="/rsc/img/brz_logo_neu.png"         onClick="win.onLogoBRZClicked()" />
+          </toolbar>-->
+      </north>
+      <center border="none" flex="false">
+        <vbox width="100%">
+          <separator bar="false" />
+          <label value="EPD-Demo" style="font-weight:bold;font-size:22px;"/>
+<!--          <hbox width="100%">
+            <vbox width="140px">
+              <label value="${labels.common.version}" />
+            </vbox>
+            <vbox>
+              <label id="labelVersion" value="-"/>
+              <zscript>
+                labelVersion.setValue(de.fhdo.Definitions.VERSION);
+              </zscript>
+            </vbox>
+          </hbox> -->
+          <separator bar="false" height="10px"/>
+          
+          <separator bar="true" hflex="true"/>
+          <separator bar="false" />
+          
+          <hbox width="100%">
+            <vbox width="140px">
+              <label value="eHealthSuisse" />
+            </vbox>
+            <vbox>
+              <label value="Auftraggeber"/>
+            </vbox>
+          </hbox>
+          
+          <hbox width="100%">
+            <vbox width="140px">
+              <label value="FH Bern: "/>
+            </vbox>
+            <vbox>
+              <label value="Julia Bachofner, Serge Bignens, François von Kaenel, Kevin Tippenhauer"/>
+            </vbox>
+          </hbox>
+          
+          <hbox width="100%">
+            <vbox width="140px">
+              <label value="FH Dortmund: "/>
+            </vbox>
+            <vbox>
+              <label value="Peter Haas, Robert Mützner"/>
+            </vbox>
+          </hbox>
+          <separator bar="false"/> 
+          <separator bar="true" hflex="true"/>
+          
+          <!--<separator bar="false"/> 
+          <label value="${labels.about.projectEBPG}"/>
+          <label value=""/>
+          <separator bar="true" width="300px"/>
+          <separator bar="false"/> 
+          <hbox width="100%">
+            <vbox width="140px">
+              <label value="${labels.about.leadership}" />
+              <label value="${labels.about.programming}"/>
+            </vbox>
+            <vbox>
+              <label value="${labels.common.pHaas}"/>
+              <label value="${labels.common.rMuetzner}, ${labels.common.sBecker}"/>
+            </vbox>
+          </hbox>
+          <separator bar="false" width="300px"/> 
+          <separator bar="true" width="300px"/>
+          <separator bar="false" width="300px"/> -->
+          
+        </vbox>
+      </center>
+      
+      <!--<south border="none">
+        <button label="${labels.common.close}" style="margin-top:5px;" onClick="win.detach();" width="100%"/>
+      </south>-->
+    </borderlayout>
+  </window>
+</zk>
