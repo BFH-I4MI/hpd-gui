@@ -1,0 +1,59 @@
+<S:Envelope xmlns:S="http://www.w3.org/2003/05/soap-envelope" xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:urn="urn:oasis:names:tc:DSML:2:0:core">
+  <env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken wsu:Id="UsernameToken-A85D182E16C2B28AF914310065840142">
+        <wsse:Username>svrTerm</wsse:Username>
+        <wsse:Password wsse:Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">com</wsse:Password>
+        <wsse:Created>2015-05-08T10:06:39+0200</wsse:Created>
+      </wsse:UsernameToken>
+    </wsse:Security>
+    <wsa:Action>urn:ihe:iti:2010:ProviderInformationQuery</wsa:Action>
+    <wsa:To>http://147.87.117.77:8080/hpd-ws/ProviderInformationDirectoryService</wsa:To>
+    <wsa:ReplyTo>
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID>uuid:c4f3b81b-4047-4a59-b680-cc51e7bdbc7c</wsa:MessageID>
+  </env:Header>
+  <S:Body>
+    <batchRequest xmlns="urn:oasis:names:tc:DSML:2:0:core" xmlns:ns2="urn:ehealth-suisse:names:tc:CS:1">
+      <searchRequest derefAliases="neverDerefAliases" dn="dc=HPD,o=ehealth-suisse,c=ch" requestID="1" scope="wholeSubtree" sizeLimit="100">
+        <filter>
+          <and>
+            <equalityMatch name="objectClass">
+              <value>organization</value>
+            </equalityMatch>
+            <substrings name="HcRegisteredName">
+              <value>Bern</value>
+            </substrings>
+            <equalityMatch name="hpdProviderStatus">
+              <value>active</value>
+            </equalityMatch>
+          </and>
+        </filter>
+        <attributes>
+          <attribute name="objectClass"/>
+          <attribute name="givenName"/>
+          <attribute name="sn"/>
+          <attribute name="cn"/>
+          <attribute name="memberOf"/>
+          <attribute name="HcPracticeLocation"/>
+          <attribute name="HcPrincipalPracticeLocation"/>
+          <attribute name="HcRegisteredAddr"/>
+          <attribute name="HcServiceLocations"/>
+          <attribute name="hpdProviderPracticeAddress"/>
+          <attribute name="HcIdentifier"/>
+          <attribute name="HcRegisteredName"/>
+          <attribute name="HcRole"/>
+          <attribute name="HcSpecialisation"/>
+          <attribute name="HcOperatingHours"/>
+          <attribute name="hpdProviderLanguageSupported"/>
+          <attribute name="description"/>
+          <attribute name="hcProfession"/>
+          <attribute name="displayName"/>
+          <attribute name="hpdProviderStatus"/>
+          <attribute name="businessCategory"/>
+        </attributes>
+      </searchRequest>
+    </batchRequest>
+  </S:Body>
+</S:Envelope>
