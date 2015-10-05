@@ -10,4 +10,6 @@
     <system systemId="http://localhost:8080/TermServer/Authorization?xsd=1" uri="wsdl/localhost_8080/TermServer/Authorization.xsd_1.xsd"/>
     <system systemId="http://epdis.i4mi.bfh.ch:8080/TermServer/Authorization?wsdl" uri="wsdl/epdis.i4mi.bfh.ch_8080/TermServer/Authorization.wsdl"/>
     <system systemId="http://epdis.i4mi.bfh.ch:8080/TermServer/Authorization?xsd=1" uri="wsdl/epdis.i4mi.bfh.ch_8080/TermServer/Authorization.xsd_1.xsd"/>
+    <system systemId="http://epdhpd.i4mi.bfh.ch:8080/hpd-ws/xsd/DSMLv2.xsd" uri="wsdl/epdhpd.i4mi.bfh.ch_8080/hpd-ws/xsd/DSMLv2.xsd"/>
+    <system systemId="http://epdhpd.i4mi.bfh.ch:8080/hpd-ws/xsd/CS.xsd" uri="wsdl/epdhpd.i4mi.bfh.ch_8080/hpd-ws/xsd/CS.xsd"/>
 </catalog>

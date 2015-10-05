@@ -55,7 +55,7 @@
         </copy>
     </target>
     <target name="wsimport-client-clean-ProviderInformationDirectoryService" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/ihe/iti/hpd/_2010"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/ihe/iti/_2010"/>
         <delete dir="${build.generated.dir}/jax-wsCache/ProviderInformationDirectoryService"/>
     </target>
     <target name="wsimport-client-Authorization" depends="wsimport-init">

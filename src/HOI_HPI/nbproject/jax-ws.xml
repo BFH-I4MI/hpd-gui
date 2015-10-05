@@ -37,7 +37,7 @@
     <client name="ProviderInformationDirectoryService">
       <wsdl-url>http://147.87.117.77:8080/hpd-ws/ProviderInformationDirectoryService.wsdl</wsdl-url>
       <local-wsdl-file>147.87.117.77_8080/hpd-ws/ProviderInformationDirectoryService.wsdl</local-wsdl-file>
-      <package-name>ihe.iti.hpd._2010</package-name>
+      <package-name>ihe.iti._2010</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
         <wsimport-option>

@@ -22,8 +22,8 @@
       </menu>
       <menu label="${labels.about}">
         <menupopup>
-          <menuitem id="menuItemHelp" label="${labels.help}" image="/rsc/img/symbols/help_16x16.png"/>
-          <menuseparator />
+          <menuitem id="menuItemHelp" label="${labels.help}" image="/rsc/img/symbols/help_16x16.png" target="_blank"/>
+          <menuseparator id="menuHelpSeparator"/>
           <menuitem id="menuItemAbout" label="${labels.aboutEPD}" image="/rsc/img/symbols/about_16x16.png"/>
         </menupopup>
       </menu>

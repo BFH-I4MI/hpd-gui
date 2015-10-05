@@ -38,6 +38,8 @@ public class PropertiesHelper
 
   private String menuHoiUrl;
   private String menuHoiImage;
+  
+  private String menuHelpUrl;
 
   private String termserverUrl;
   private String termserverLoginName;
@@ -76,6 +78,8 @@ public class PropertiesHelper
       menuHoiUrl = config.getProperty("menu.hoi.url", "http://localhost:8080/HOI_HPI/");
       menuHpiUrl = config.getProperty("menu.hpi.url", "http://localhost:8080/HOI_HPI/");
       menuMdiUrl = config.getProperty("menu.mdi.url", "http://localhost:8080/TermBrowser/");
+      
+      menuHelpUrl = config.getProperty("menu.help.url", "");
 
       if (menuHoiUrl.endsWith("/") == false)
         menuHoiUrl = menuHoiUrl + "/";
@@ -197,6 +201,14 @@ public class PropertiesHelper
   public String getTermserverUrl()
   {
     return termserverUrl;
+  }
+
+  /**
+   * @return the menuHelpUrl
+   */
+  public String getMenuHelpUrl()
+  {
+    return menuHelpUrl;
   }
 
 }

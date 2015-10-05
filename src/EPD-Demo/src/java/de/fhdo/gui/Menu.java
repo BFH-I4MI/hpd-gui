@@ -14,6 +14,7 @@ import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.event.Events;
+import org.zkoss.zul.Filedownload;
 import org.zkoss.zul.Label;
 import org.zkoss.zul.Menuitem;
 import org.zkoss.zul.Toolbarbutton;
@@ -76,7 +77,7 @@ public class Menu
       public void onEvent(Event t) throws Exception
       {
         //String url = "http://" + Executions.getCurrent().getServerName() + ":8080/HOI_HPI/Portal/listview.zul?mode=hoi";
-        String url = PropertiesHelper.getInstance().getMenuHoiUrl()+ "Portal/listview.zul?mode=hoi";
+        String url = PropertiesHelper.getInstance().getMenuHoiUrl() + "Portal/listview.zul?mode=hoi";
         logger.debug("URL: " + url);
         parentWindow.changeModule(url, Labels.getLabel("hoiLong"));
       }
@@ -92,7 +93,7 @@ public class Menu
         parentWindow.changeModule(url, Labels.getLabel("hpiLong"));
       }
     };
-    
+
     EventListener logoutEvent = new EventListener<Event>()
     {
       public void onEvent(Event t) throws Exception
@@ -101,6 +102,17 @@ public class Menu
         UsernamePasswordLogin.doLogout();
       }
     };
+
+    // Show help configured in property file
+    boolean showHelp = PropertiesHelper.getInstance().getMenuHelpUrl() != null
+            && PropertiesHelper.getInstance().getMenuHelpUrl().length() > 0;
+    Menuitem miHelp = ((Menuitem) window.getFellow("menuItemHelp"));
+    if (showHelp)
+    {
+      miHelp.setHref(PropertiesHelper.getInstance().getMenuHelpUrl()); 
+    }
+    miHelp.setVisible(showHelp);
+    window.getFellow("menuHelpSeparator").setVisible(showHelp);
 
     Toolbarbutton tbbMDI = (Toolbarbutton) window.getFellow("tbbMDI");
     Toolbarbutton tbbHOI = (Toolbarbutton) window.getFellow("tbbHOI");
@@ -112,7 +124,7 @@ public class Menu
     ((Menuitem) window.getFellow("menuItemMDI")).addEventListener(Events.ON_CLICK, mdiEvent);
     ((Menuitem) window.getFellow("menuItemHOI")).addEventListener(Events.ON_CLICK, hoiEvent);
     ((Menuitem) window.getFellow("menuItemHPI")).addEventListener(Events.ON_CLICK, hpiEvent);
-    
+
     ((Menuitem) window.getFellow("menuItemLogout")).addEventListener(Events.ON_CLICK, logoutEvent);
 
     EventListener aboutEvent = new EventListener<Event>()
@@ -123,7 +135,7 @@ public class Menu
         {
           Window win = (Window) Executions.createComponents(
                   "/Portal/about.zul", parentWindow, null);
-          
+
           win.doModal();
           //win.doHighlighted();
         }
